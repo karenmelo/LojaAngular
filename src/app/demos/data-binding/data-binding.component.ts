@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { TitleStrategy } from "@angular/router";
 
 @Component({
   selector: "app-data-binding",
@@ -6,6 +7,19 @@ import { Component, OnInit } from "@angular/core";
   styles: [],
 })
 export class DataBindingComponent {
-  public contadorClique: number = 0;
-  public urlImage: string = "";
+  public contadorClique: number = 1;
+  public urlImage: string =
+    "https://angular.io/assets/images/logos/angular/angular.svg";
+  public nome: string = "";
+  adicionarClique() {
+    this.contadorClique++;
+  }
+
+  zerarContador() {
+    this.contadorClique = 0;
+  }
+
+  KeyUp(event: any) {
+    this.nome = event.target.value;
+  }
 }

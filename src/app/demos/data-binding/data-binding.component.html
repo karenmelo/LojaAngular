@@ -8,4 +8,15 @@
   <button class="btn btn-info" [disabled]="contadorClique >= 10">Info</button>
   <br><br>
   <img [src]="urlImage" alt="" height="50px" width="50px">
+
+  <br><br><br>
+  <h3>Event Binding</h3>
+  <button class="btn btn-warning" (click)="adicionarClique()">Clique-me</button>
+  <button class="btn btn-danger" (click)="zerarContador()" [disabled]="contadorClique < 10">Zerar Contador</button>
+
+  <br><br><br>
+  <h3>Two-way binding</h3>
+  <input type="text" (keyup)="KeyUp($event)" placeholder="Digite seu nome">
+  <br><br>
+  <label for="">Seu nome e: {{ nome }}</label>
 </div>
