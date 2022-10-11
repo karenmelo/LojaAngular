@@ -1,16 +1,17 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
-import { APP_BASE_HREF } from '@angular/common'
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { RouterModule } from "@angular/router";
+import { APP_BASE_HREF } from "@angular/common";
+import { FormsModule } from "@angular/forms";
 
-import { AppComponent } from './app.component';
-import { MenuComponent } from './navegacao/menu/menu.component';
-import { HomeComponent } from './navegacao/home/home.component';
-import { FooterComponent } from './navegacao/footer/footer.component';
-import { SobreComponent } from './institucional/sobre/sobre.component';
-import { ContatoComponent } from './institucional/contato/contato.component';
-import { rootRouteConfig } from './app.routes';
-import { DataBindingComponent } from './demos/data-binding/data-binding.component';
+import { AppComponent } from "./app.component";
+import { MenuComponent } from "./navegacao/menu/menu.component";
+import { HomeComponent } from "./navegacao/home/home.component";
+import { FooterComponent } from "./navegacao/footer/footer.component";
+import { SobreComponent } from "./institucional/sobre/sobre.component";
+import { ContatoComponent } from "./institucional/contato/contato.component";
+import { rootRouteConfig } from "./app.routes";
+import { DataBindingComponent } from "./demos/data-binding/data-binding.component";
 
 @NgModule({
   declarations: [
@@ -20,17 +21,19 @@ import { DataBindingComponent } from './demos/data-binding/data-binding.componen
     FooterComponent,
     SobreComponent,
     ContatoComponent,
-    DataBindingComponent
+    DataBindingComponent,
   ],
   imports: [
     BrowserModule,
-    [RouterModule.forRoot(rootRouteConfig, {useHash: false})]
+    FormsModule,
+    [RouterModule.forRoot(rootRouteConfig, { useHash: false })],
   ],
   providers: [
     {
-      provide: APP_BASE_HREF, useValue: '/'
-    }
+      provide: APP_BASE_HREF,
+      useValue: "/",
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { TitleStrategy } from "@angular/router";
 
 @Component({
   selector: "app-data-binding",
@@ -19,7 +18,7 @@ export class DataBindingComponent {
     this.contadorClique = 0;
   }
 
-  KeyUp(event: any) {
-    this.nome = event.target.value;
-  }
+  // KeyUp(event: any) {
+  //   this.nome = event.target.value;
+  // }
 }
